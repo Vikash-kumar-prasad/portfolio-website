@@ -1,65 +1,30 @@
-# My Portfolio Website - Overview 🚀
+# Vikash Kumar Prasad — Portfolio
 
-This repository contains the open-source version of my personal portfolio website.  
-Feel free to explore the code and use it for learning and inspiration.
+Personal developer portfolio built with React, TypeScript, Three.js, and GSAP.
 
----
+## Tech Stack
 
-## ⚠️ Usage Notice
+- **React 18** + **TypeScript** — UI framework
+- **Vite 5** — Build tool
+- **Three.js** + **React Three Fiber** — 3D particle system and tech stack visualization
+- **GSAP** + **ScrollTrigger** — Scroll-triggered animations
+- **Lenis** — Smooth scrolling
+- **Rapier** — Physics-based 3D tech stack section
 
-This project is shared for learning purposes only.
+## Getting Started
 
-Please do NOT:
-- Clone or replicate the full website or design
-- Repost it with minor content changes
-- Use this project for commercial/client work
-- Create tutorials or content using this exact project
+```bash
+npm install
+npm run dev
+```
 
-If you use parts of the code, you must provide proper credit linking back to the original repository.
+## Build
 
-Build your own version — don’t just copy.
+```bash
+npm run build
+npm run preview
+```
 
-— Moncy Yohannan
+## Attribution
 
----
-
-## 🛠️ Instructions
-
-I have modified the GSAP Club plugins using trial versions.  
-⚠️ Note: Trial plugins cannot be used for production or hosting.
-
-For official GSAP Club plugins, refer here:  
-https://gsap.com/docs/v3/Installation/
-
----
-
-## ⚙️ Tech Stack
-
-React • TypeScript • GSAP • Three.js • WebGL • HTML • CSS • JavaScript
-
----
-
-## 🎨 Assets Usage
-
-Some 3D assets included in this repository are free to use for learning purposes.
-
-However:
-
-- The original 3D avatar used on my live portfolio is NOT included in this repository
-- That avatar is a custom asset created over ~1 month
-- It is not open source and not available for reuse
-
-Any usage, extraction, or redistribution of that avatar from my live website is strictly prohibited.
-
----
-
-![Protfolio-Preview](https://github.com/user-attachments/assets/3c4557e7-6392-4928-b8a9-7b2476ef4edd)
-
----
-
-## 📄 License
-
-This project is licensed under the Personal Portfolio License (PPL) v1.0.
-
-See the LICENSE file for full details
-
+This project was inspired by and built upon a portfolio template by [Moncy Yohannan](https://moncy.dev), used with modifications in accordance with the original project's license terms.

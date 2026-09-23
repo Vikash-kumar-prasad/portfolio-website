@@ -1,0 +1,446 @@
+/* ============================================================
+   Final CTA + Footer Styles — Spacious, Balanced & Premium
+   ============================================================ */
+
+.footer-site {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  background-color: #050608;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 72px 0 44px;
+  box-sizing: border-box;
+}
+
+/* --- Subtle Grid Atmosphere (Strictly Behind Content) --- */
+
+.footer-grid-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    rgba(0, 212, 255, 0.08) 1px,
+    transparent 1px
+  );
+  background-size: 40px 40px;
+  opacity: 0.18;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse at 50% 30%, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 30%, black 30%, transparent 75%);
+  z-index: 1;
+}
+
+.footer-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ============================================================
+   1. CTA SECTION (Upper ~45–50% of the section)
+   ============================================================ */
+
+.footer-cta-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 44px;
+  width: 100%;
+}
+
+.footer-headline {
+  font-family: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: clamp(30px, 4.2vw, 48px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+}
+
+.headline-accent {
+  background: linear-gradient(90deg, #00d4ff 0%, #38bdf8 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 28px rgba(0, 212, 255, 0.35);
+  display: inline-block;
+}
+
+.footer-subheadline {
+  font-size: clamp(15px, 1.6vw, 17px);
+  line-height: 1.65;
+  color: #94a3b8;
+  margin: 0 0 32px;
+  max-width: 560px;
+  letter-spacing: 0.2px;
+}
+
+.footer-primary-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(8, 14, 24, 0.85);
+  color: #ffffff;
+  border: 1.5px solid #00d4ff;
+  padding: 13px 36px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.18), inset 0 0 10px rgba(0, 212, 255, 0.06);
+  backdrop-filter: blur(8px);
+}
+
+.cta-arrow {
+  font-size: 17px;
+  color: #00d4ff;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+
+.footer-primary-cta:hover {
+  background: #00d4ff;
+  color: #050608;
+  border-color: #00d4ff;
+  transform: translateY(-2px);
+  box-shadow: 0 0 32px rgba(0, 212, 255, 0.5), 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+.footer-primary-cta:hover .cta-arrow {
+  color: #050608;
+  transform: translateX(4px);
+}
+
+/* ============================================================
+   2. Horizontal Divider with Center Glow Dot
+   ============================================================ */
+
+.footer-divider-line {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08) 25%,
+    rgba(0, 212, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0.08) 75%,
+    transparent
+  );
+  margin: 0 auto 52px;
+}
+
+.divider-glow-dot {
+  position: absolute;
+  top: -2.5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #00d4ff;
+  box-shadow: 0 0 10px #00d4ff, 0 0 18px rgba(0, 212, 255, 0.6);
+}
+
+/* ============================================================
+   3. FOOTER MAIN IDENTITY, NAVIGATION & SOCIALS
+   ============================================================ */
+
+.footer-brand-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 48px;
+  width: 100%;
+}
+
+.footer-brand-title {
+  font-family: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 2.8px;
+  color: #ffffff;
+  margin: 0 0 22px;
+  text-transform: uppercase;
+}
+
+.footer-brand-subtitle {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  color: #00d4ff;
+  margin: 0 0 28px;
+  text-transform: uppercase;
+}
+
+/* Navigation Row */
+.footer-nav {
+  margin-bottom: 26px;
+}
+
+.footer-nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 34px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.footer-nav-item {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+  padding: 4px 0;
+}
+
+.footer-nav-item:hover {
+  color: #00d4ff;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.45);
+}
+
+/* Social Icon Buttons */
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-social-icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(18, 22, 34, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer-social-icon-btn:hover {
+  border-color: #00d4ff;
+  color: #00d4ff;
+  background: rgba(0, 212, 255, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 0 16px rgba(0, 212, 255, 0.3);
+}
+
+/* ============================================================
+   4. Divider before Bottom Footer Bar
+   ============================================================ */
+
+.footer-bottom-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.07);
+  margin: 0 0 28px;
+}
+
+/* ============================================================
+   5. BOTTOM FOOTER BAR (Three-Part Layout)
+   ============================================================ */
+
+.footer-bottom-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+.bottom-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bottom-left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.bottom-center {
+  align-items: center;
+  text-align: center;
+  gap: 7px;
+}
+
+.bottom-right {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.bottom-copy {
+  font-size: 12px;
+  font-weight: 500;
+  color: #cbd5e1;
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+}
+
+.bottom-sub {
+  font-size: 11px;
+  color: #64748b;
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+}
+
+.motto-text {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  color: #00d4ff;
+  line-height: 1.2;
+}
+
+/* Back to Top Button */
+.footer-scroll-top-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid rgba(0, 212, 255, 0.28);
+  border-radius: 9999px;
+  padding: 4px 14px;
+  color: #94a3b8;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.scroll-arrow-icon {
+  font-size: 13px;
+  color: #00d4ff;
+  transition: transform 0.25s ease;
+}
+
+.footer-scroll-top-btn:hover {
+  border-color: #00d4ff;
+  color: #00d4ff;
+  background: rgba(0, 212, 255, 0.08);
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.footer-scroll-top-btn:hover .scroll-arrow-icon {
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
+
+@media screen and (max-width: 900px) {
+  .footer-site {
+    padding: 80px 0 52px;
+  }
+
+  .footer-container {
+    padding: 0 24px;
+  }
+
+  .footer-headline {
+    font-size: clamp(26px, 4.5vw, 36px);
+  }
+
+  .footer-nav-links {
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-site {
+    padding: 68px 0 52px;
+  }
+
+  .footer-cta-section {
+    margin-bottom: 44px;
+  }
+
+  .footer-divider-line {
+    margin-bottom: 40px;
+  }
+
+  .footer-brand-section {
+    margin-bottom: 36px;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 22px;
+  }
+
+  .bottom-left,
+  .bottom-center,
+  .bottom-right {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-site {
+    padding: 56px 0 48px;
+  }
+
+  .footer-container {
+    padding: 0 18px;
+  }
+
+  .footer-headline {
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  .footer-subheadline {
+    font-size: 14px;
+    margin-bottom: 26px;
+  }
+
+  .footer-primary-cta {
+    padding: 12px 28px;
+    font-size: 12px;
+  }
+
+  .footer-brand-title {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .footer-nav-links {
+    gap: 18px;
+  }
+
+  .footer-nav-item {
+    font-size: 11px;
+  }
+}

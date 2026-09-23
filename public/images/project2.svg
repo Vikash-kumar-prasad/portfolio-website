@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p2-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e131f"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </linearGradient>
+    <linearGradient id="p2-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="350" rx="12" fill="url(#p2-bg)" stroke="rgba(0, 212, 255, 0.2)" stroke-width="1.5"/>
+
+  <!-- Subtle grid -->
+  <path d="M0 70 H600 M0 140 H600 M0 210 H600 M0 280 H600 M120 0 V350 M240 0 V350 M360 0 V350 M480 0 V350" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+
+  <!-- Main Quiz Container -->
+  <g transform="translate(60, 35)">
+    <!-- Header Bar -->
+    <rect width="480" height="50" rx="8" fill="#121624" stroke="rgba(255, 255, 255, 0.08)"/>
+    <rect x="20" y="15" width="120" height="20" rx="10" fill="rgba(0, 212, 255, 0.15)"/>
+    <text x="80" y="29" fill="#00d4ff" font-family="'Geist', sans-serif" font-size="11" font-weight="600" text-anchor="middle">QUESTION 03 / 10</text>
+    
+    <!-- Topic Badge -->
+    <rect x="330" y="15" width="130" height="20" rx="10" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255, 255, 255, 0.1)"/>
+    <circle cx="345" cy="25" r="4" fill="#34d399"/>
+    <text x="400" y="29" fill="#e4e4e7" font-family="'Geist', sans-serif" font-size="10" text-anchor="middle">Topic: OS &amp; Concurrency</text>
+
+    <!-- Question Card -->
+    <rect y="65" width="480" height="60" rx="8" fill="#10131d" stroke="rgba(0, 212, 255, 0.2)"/>
+    <text x="25" y="100" fill="#ffffff" font-family="'Geist', sans-serif" font-size="13" font-weight="500">What is the primary difference between a process and a kernel thread?</text>
+
+    <!-- Options 2x2 Grid -->
+    <!-- Option A -->
+    <g transform="translate(0, 140)">
+      <rect width="232" height="50" rx="8" fill="#121624" stroke="rgba(255, 255, 255, 0.08)"/>
+      <rect x="15" y="15" width="20" height="20" rx="4" fill="rgba(255, 255, 255, 0.08)"/>
+      <text x="25" y="29" fill="#a1a1aa" font-family="'Geist', sans-serif" font-size="11" font-weight="600" text-anchor="middle">A</text>
+      <text x="48" y="29" fill="#d4d4d8" font-family="'Geist', sans-serif" font-size="11">Separate address space</text>
+    </g>
+
+    <!-- Option B (Correct selected) -->
+    <g transform="translate(248, 140)">
+      <rect width="232" height="50" rx="8" fill="rgba(0, 212, 255, 0.1)" stroke="#00d4ff" stroke-width="1.5"/>
+      <rect x="15" y="15" width="20" height="20" rx="4" fill="#00d4ff"/>
+      <text x="25" y="29" fill="#0a0a0f" font-family="'Geist', sans-serif" font-size="11" font-weight="700" text-anchor="middle">B</text>
+      <text x="48" y="29" fill="#00d4ff" font-family="'Geist', sans-serif" font-size="11" font-weight="500">Shared memory &amp; resources</text>
+    </g>
+
+    <!-- Option C -->
+    <g transform="translate(0, 202)">
+      <rect width="232" height="50" rx="8" fill="#121624" stroke="rgba(255, 255, 255, 0.08)"/>
+      <rect x="15" y="15" width="20" height="20" rx="4" fill="rgba(255, 255, 255, 0.08)"/>
+      <text x="25" y="29" fill="#a1a1aa" font-family="'Geist', sans-serif" font-size="11" font-weight="600" text-anchor="middle">C</text>
+      <text x="48" y="29" fill="#d4d4d8" font-family="'Geist', sans-serif" font-size="11">Priority inversion rate</text>
+    </g>
+
+    <!-- Option D -->
+    <g transform="translate(248, 202)">
+      <rect width="232" height="50" rx="8" fill="#121624" stroke="rgba(255, 255, 255, 0.08)"/>
+      <rect x="15" y="15" width="20" height="20" rx="4" fill="rgba(255, 255, 255, 0.08)"/>
+      <text x="25" y="29" fill="#a1a1aa" font-family="'Geist', sans-serif" font-size="11" font-weight="600" text-anchor="middle">D</text>
+      <text x="48" y="29" fill="#d4d4d8" font-family="'Geist', sans-serif" font-size="11">Direct I/O bypass limit</text>
+    </g>
+
+    <!-- Bottom Progress / AI engine tag -->
+    <g transform="translate(0, 264)">
+      <text x="5" y="12" fill="#71717a" font-family="'Geist', sans-serif" font-size="10">Powered by Groq LLM API • Dynamic Quiz Generation</text>
+      <rect x="360" y="2" width="120" height="8" rx="4" fill="#181e30"/>
+      <rect x="360" y="2" width="85" height="8" rx="4" fill="url(#p2-accent)"/>
+    </g>
+  </g>
+</svg>

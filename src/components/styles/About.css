@@ -1,71 +1,355 @@
+/* ============================================================
+   About Section Styles — Refined Hierarchy & Spacious Balance
+   ============================================================ */
+
 .about-section {
+  position: relative;
+  background-color: var(--backgroundColor, #0a0a0f);
+  padding: 105px 0 90px;
+  min-height: calc(100vh - 70px);
   display: flex;
   align-items: center;
-  justify-content: left;
-  place-items: center;
-  position: relative;
-  opacity: 1;
-  height: auto;
-  width: var(--cWidth);
-  margin: auto;
-}
-.about-me {
-  padding: 50px 0px;
-  padding-bottom: 0;
-  width: 500px;
-  max-width: calc(100% - 15px);
-}
-.about-me h3 {
-  font-size: 25px;
-  text-transform: uppercase;
-  letter-spacing: 7px;
-  font-weight: 400;
-  color: var(--accentColor);
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-.about-me p {
-  font-size: 33px;
+.about-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 48px;
+  padding-right: 48px;
+  box-sizing: border-box;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.about-main-col {
+  text-align: left;
+}
+
+.about-main-col .section-eyebrow {
+  font-size: 14px;
   font-weight: 600;
-  line-height: 36px;
-  letter-spacing: 1px;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  color: #00d4ff;
+  display: inline-block;
+  margin-bottom: 22px;
 }
 
-@media only screen and (min-width: 600px) {
-  .about-section {
-    justify-content: center;
+.about-heading {
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 32px;
+  line-height: 1.18;
+  letter-spacing: -0.6px;
+}
+
+.about-text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 550px;
+}
+
+.about-para {
+  font-size: 18px;
+  line-height: 1.84;
+  color: #cbd5e1;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Engineering Profile Card Column */
+.about-card-col {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-engineering-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 520px;
+  background: rgba(15, 17, 24, 0.78);
+  border: 1px solid rgba(0, 212, 255, 0.22);
+  border-radius: 20px;
+  padding: 38px 36px 30px 36px;
+  box-sizing: border-box;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5), 0 0 28px rgba(0, 212, 255, 0.07);
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.about-engineering-card:hover {
+  border-color: rgba(0, 212, 255, 0.45);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 36px rgba(0, 212, 255, 0.14);
+  transform: translateY(-2px);
+}
+
+.about-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 18px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-card-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-indicator {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #00d4ff;
+  box-shadow: 0 0 10px #00d4ff;
+  display: inline-block;
+}
+
+.status-label {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.2px;
+  color: #00d4ff;
+  text-transform: uppercase;
+}
+
+.about-card-code {
+  font-size: 12.5px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color: #94a3b8;
+  letter-spacing: 1.2px;
+  font-weight: 500;
+}
+
+.about-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.info-label {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.info-value {
+  font-size: 16px;
+  color: #f1f5f9;
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+.ai-cloud-value {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.tech-separator {
+  display: inline-block;
+  color: #00d4ff;
+  opacity: 0.65;
+  margin: 0 14px;
+  font-size: 16px;
+  line-height: 1;
+  user-select: none;
+}
+
+.about-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-badge {
+  flex: 1;
+  text-align: center;
+  white-space: nowrap;
+  background: rgba(0, 212, 255, 0.04);
+  color: #7dd3fc;
+  border: 1px solid rgba(0, 212, 255, 0.18);
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.25s ease;
+}
+
+.about-badge:hover {
+  background: rgba(0, 212, 255, 0.12);
+  border-color: rgba(0, 212, 255, 0.4);
+  color: #ffffff;
+}
+
+/* ============================================================
+   Responsive Queries
+   ============================================================ */
+@media only screen and (max-width: 1150px) {
+  .about-container {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  .about-grid {
+    gap: 48px;
+  }
+
+  .about-heading {
+    font-size: clamp(34px, 3.8vw, 48px);
+    margin-bottom: 28px;
+  }
+
+  .about-para {
+    font-size: 17.5px;
+  }
+
+  .about-engineering-card {
+    padding: 34px 28px 26px 28px;
+  }
+
+  .about-card-body {
+    gap: 20px;
   }
 }
-@media only screen and (min-width: 768px) {
-  .about-me {
-    width: 500px;
-    max-width: calc(100% - 70px);
-    transform: translateY(0%);
-  }
+
+@media only screen and (max-width: 960px) {
   .about-section {
-    opacity: 1;
+    padding: 90px 0 70px;
+    min-height: auto;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 52px;
+  }
+
+  .about-main-col {
+    max-width: 100%;
+  }
+
+  .about-text-wrap {
+    max-width: 100%;
+    gap: 22px;
+  }
+
+  .about-card-col {
+    justify-content: flex-start;
+  }
+
+  .about-engineering-card {
+    max-width: 100%;
   }
 }
-@media only screen and (min-width: 1025px) {
+
+@media only screen and (max-width: 768px) {
   .about-section {
-    width: var(--cWidth);
-    justify-content: right;
-    max-width: 1920px;
-    height: var(--vh);
-    padding: 0px;
-    opacity: 1;
+    padding: 80px 0 60px;
   }
-  .about-me {
-    padding: 0px;
-    width: 50%;
+
+  .about-container {
+    padding-left: 24px;
+    padding-right: 24px;
   }
-  .about-me p {
-    font-size: 1.9vw;
-    line-height: 2.3vw;
+
+  .about-heading {
+    font-size: 32px;
+    margin-bottom: 22px;
+  }
+
+  .about-para {
+    font-size: 16.5px;
+    line-height: 1.72;
+  }
+
+  .about-engineering-card {
+    padding: 28px 22px 24px 22px;
+  }
+
+  .about-card-body {
+    gap: 18px;
+  }
+
+  .info-value {
+    font-size: 15.5px;
   }
 }
-@media only screen and (min-width: 1950px) {
-  .about-me p {
-    font-size: 2.5rem;
-    line-height: 2.7rem;
+
+@media only screen and (max-width: 480px) {
+  .about-section {
+    padding: 70px 0 50px;
+  }
+
+  .about-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .about-heading {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+  }
+
+  .about-para {
+    font-size: 15.5px;
+  }
+
+  .about-engineering-card {
+    padding: 24px 18px 20px 18px;
+  }
+
+  .about-card-footer {
+    gap: 8px;
+    margin-top: 20px;
+    padding-top: 16px;
+  }
+
+  .about-badge {
+    padding: 5px 6px;
+    font-size: 10px;
+    letter-spacing: 0.3px;
+  }
+
+  .tech-separator {
+    margin: 0 8px;
   }
 }

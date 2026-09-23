@@ -1,33 +1,45 @@
 import { lazy, PropsWithChildren, Suspense, useEffect, useState } from "react";
 import About from "./About";
-import Career from "./Career";
+import Education from "./Education";
 import Contact from "./Contact";
+import Footer from "./Footer";
 import Cursor from "./Cursor";
-import Landing from "./Landing";
 import Navbar from "./Navbar";
 import SocialIcons from "./SocialIcons";
 import WhatIDo from "./WhatIDo";
 import Work from "./Work";
-import setSplitText from "./utils/splitText";
+import { setSplitText, clearSplitText } from "./utils/splitText";
+import { setScrollAnimations } from "./utils/GsapScroll";
 
 const TechStack = lazy(() => import("./TechStack"));
 
 const MainContainer = ({ children }: PropsWithChildren) => {
-  const [isDesktopView, setIsDesktopView] = useState<boolean>(
-    window.innerWidth > 1024
+  const [isDesktopView, setIsDesktopView] = useState<boolean>(() =>
+    typeof window !== "undefined" ? window.innerWidth > 1024 : true
   );
 
   useEffect(() => {
+    setSplitText();
+    const cleanupScroll = setScrollAnimations();
+
+    let resizeTimer: number;
     const resizeHandler = () => {
-      setSplitText();
-      setIsDesktopView(window.innerWidth > 1024);
+      clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(() => {
+        setSplitText();
+        setIsDesktopView(window.innerWidth > 1024);
+      }, 150);
     };
-    resizeHandler();
-    window.addEventListener("resize", resizeHandler);
+
+    window.addEventListener("resize", resizeHandler, { passive: true });
+
     return () => {
+      clearTimeout(resizeTimer);
+      clearSplitText();
+      cleanupScroll();
       window.removeEventListener("resize", resizeHandler);
     };
-  }, [isDesktopView]);
+  }, []);
 
   return (
     <div className="container-main">
@@ -38,17 +50,15 @@ const MainContainer = ({ children }: PropsWithChildren) => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <div className="container-main">
-            <Landing>{!isDesktopView && children}</Landing>
-            <About />
+            <About>{!isDesktopView && children}</About>
             <WhatIDo />
-            <Career />
+            <Suspense fallback={<div style={{ minHeight: "200px" }} />}>
+              <TechStack />
+            </Suspense>
             <Work />
-            {isDesktopView && (
-              <Suspense fallback={<div>Loading....</div>}>
-                <TechStack />
-              </Suspense>
-            )}
+            <Education />
             <Contact />
+            <Footer />
           </div>
         </div>
       </div>

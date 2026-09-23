@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p3-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e131f"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </linearGradient>
+    <linearGradient id="p3-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="350" rx="12" fill="url(#p3-bg)" stroke="rgba(0, 212, 255, 0.2)" stroke-width="1.5"/>
+
+  <!-- Subtle grid -->
+  <path d="M0 70 H600 M0 140 H600 M0 210 H600 M0 280 H600 M120 0 V350 M240 0 V350 M360 0 V350 M480 0 V350" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+
+  <!-- Dashboard Content -->
+  <g transform="translate(45, 35)">
+    <!-- Top Metric Cards -->
+    <!-- Metric 1: Total SKUs -->
+    <g transform="translate(0, 0)">
+      <rect width="160" height="70" rx="8" fill="#121624" stroke="rgba(255,255,255,0.08)"/>
+      <text x="16" y="25" fill="#71717a" font-family="'Geist', sans-serif" font-size="10" font-weight="500">TOTAL INVENTORY</text>
+      <text x="16" y="52" fill="#ffffff" font-family="'Geist', sans-serif" font-size="20" font-weight="700">12,480</text>
+      <rect x="100" y="36" width="46" height="18" rx="9" fill="rgba(52, 211, 153, 0.1)"/>
+      <text x="123" y="49" fill="#34d399" font-family="'Geist', sans-serif" font-size="9" font-weight="600" text-anchor="middle">+4.8%</text>
+    </g>
+
+    <!-- Metric 2: Low Stock Warning -->
+    <g transform="translate(175, 0)">
+      <rect width="160" height="70" rx="8" fill="#121624" stroke="rgba(245, 158, 11, 0.2)"/>
+      <text x="16" y="25" fill="#f59e0b" font-family="'Geist', sans-serif" font-size="10" font-weight="500">LOW STOCK ALERTS</text>
+      <text x="16" y="52" fill="#ffffff" font-family="'Geist', sans-serif" font-size="20" font-weight="700">8 Items</text>
+      <circle cx="135" cy="45" r="4" fill="#f59e0b"/>
+    </g>
+
+    <!-- Metric 3: Total Value -->
+    <g transform="translate(350, 0)">
+      <rect width="160" height="70" rx="8" fill="#121624" stroke="rgba(0, 212, 255, 0.2)"/>
+      <text x="16" y="25" fill="#00d4ff" font-family="'Geist', sans-serif" font-size="10" font-weight="500">SYSTEM STATUS</text>
+      <text x="16" y="52" fill="#ffffff" font-family="'Geist', sans-serif" font-size="18" font-weight="700">JWT SECURED</text>
+      <circle cx="135" cy="45" r="4" fill="#00d4ff"/>
+    </g>
+
+    <!-- Table Section -->
+    <g transform="translate(0, 85)">
+      <rect width="510" height="185" rx="8" fill="#10131d" stroke="rgba(255, 255, 255, 0.08)"/>
+      
+      <!-- Table Header -->
+      <rect width="510" height="32" rx="8" fill="#141926"/>
+      <text x="20" y="20" fill="#71717a" font-family="'Geist', sans-serif" font-size="10" font-weight="600">PRODUCT NAME</text>
+      <text x="180" y="20" fill="#71717a" font-family="'Geist', sans-serif" font-size="10" font-weight="600">CATEGORY</text>
+      <text x="290" y="20" fill="#71717a" font-family="'Geist', sans-serif" font-size="10" font-weight="600">QUANTITY</text>
+      <text x="400" y="20" fill="#71717a" font-family="'Geist', sans-serif" font-size="10" font-weight="600">STATUS</text>
+
+      <!-- Row 1 -->
+      <text x="20" y="58" fill="#e4e4e7" font-family="'Geist', sans-serif" font-size="11" font-weight="500">Wireless Sensor Hub</text>
+      <text x="180" y="58" fill="#a1a1aa" font-family="'Geist', sans-serif" font-size="11">Electronics</text>
+      <text x="290" y="58" fill="#00d4ff" font-family="'Geist', monospace, sans-serif" font-size="11" font-weight="600">240 pcs</text>
+      <rect x="400" y="46" width="70" height="18" rx="9" fill="rgba(52, 211, 153, 0.1)"/>
+      <text x="435" y="59" fill="#34d399" font-family="'Geist', sans-serif" font-size="9" text-anchor="middle">In Stock</text>
+      <line x1="15" y1="72" x2="495" y2="72" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+      <!-- Row 2 -->
+      <text x="20" y="96" fill="#e4e4e7" font-family="'Geist', sans-serif" font-size="11" font-weight="500">Industrial Relays 24V</text>
+      <text x="180" y="96" fill="#a1a1aa" font-family="'Geist', sans-serif" font-size="11">Hardware</text>
+      <text x="290" y="96" fill="#f59e0b" font-family="'Geist', monospace, sans-serif" font-size="11" font-weight="600">14 pcs</text>
+      <rect x="400" y="84" width="70" height="18" rx="9" fill="rgba(245, 158, 11, 0.1)"/>
+      <text x="435" y="97" fill="#f59e0b" font-family="'Geist', sans-serif" font-size="9" text-anchor="middle">Low Stock</text>
+      <line x1="15" y1="110" x2="495" y2="110" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+      <!-- Row 3 -->
+      <text x="20" y="134" fill="#e4e4e7" font-family="'Geist', sans-serif" font-size="11" font-weight="500">Microcontroller Dev Kit</text>
+      <text x="180" y="134" fill="#a1a1aa" font-family="'Geist', sans-serif" font-size="11">Embedded</text>
+      <text x="290" y="134" fill="#00d4ff" font-family="'Geist', monospace, sans-serif" font-size="11" font-weight="600">85 pcs</text>
+      <rect x="400" y="122" width="70" height="18" rx="9" fill="rgba(52, 211, 153, 0.1)"/>
+      <text x="435" y="135" fill="#34d399" font-family="'Geist', sans-serif" font-size="9" text-anchor="middle">In Stock</text>
+      <line x1="15" y1="148" x2="495" y2="148" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+      <!-- Row 4 -->
+      <text x="20" y="172" fill="#e4e4e7" font-family="'Geist', sans-serif" font-size="11" font-weight="500">Optocoupler Array</text>
+      <text x="180" y="172" fill="#a1a1aa" font-family="'Geist', sans-serif" font-size="11">Components</text>
+      <text x="290" y="172" fill="#00d4ff" font-family="'Geist', monospace, sans-serif" font-size="11" font-weight="600">410 pcs</text>
+      <rect x="400" y="160" width="70" height="18" rx="9" fill="rgba(52, 211, 153, 0.1)"/>
+      <text x="435" y="173" fill="#34d399" font-family="'Geist', sans-serif" font-size="9" text-anchor="middle">In Stock</text>
+    </g>
+  </g>
+</svg>

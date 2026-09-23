@@ -1,80 +1,80 @@
-import { gsap } from "gsap";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
-import { SplitText } from "gsap-trial/SplitText";
 
-interface ParaElement extends HTMLElement {
-  anim?: gsap.core.Animation;
-  split?: SplitText;
+gsap.registerPlugin(ScrollTrigger);
+
+let splitTriggers: ScrollTrigger[] = [];
+
+function splitIntoChars(element: HTMLElement): HTMLElement[] {
+  if (element.querySelector("span")) {
+    return Array.from(element.querySelectorAll("span"));
+  }
+  const text = element.textContent || "";
+  element.textContent = "";
+  const chars: HTMLElement[] = [];
+  text.split("").forEach((char) => {
+    const span = document.createElement("span");
+    span.textContent = char === " " ? "\u00A0" : char;
+    span.style.display = "inline-block";
+    span.style.willChange = "transform, opacity";
+    element.appendChild(span);
+    chars.push(span);
+  });
+  return chars;
 }
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
+export const setSplitText = () => {
+  // Clear any previous triggers before re-initializing
+  splitTriggers.forEach((st) => st.kill());
+  splitTriggers = [];
 
-export default function setSplitText() {
-  ScrollTrigger.config({ ignoreMobileResize: true });
   if (window.innerWidth < 900) return;
-  const paras: NodeListOf<ParaElement> = document.querySelectorAll(".para");
-  const titles: NodeListOf<ParaElement> = document.querySelectorAll(".title");
 
-  const TriggerStart = window.innerWidth <= 1024 ? "top 60%" : "20% 60%";
-  const ToggleAction = "play pause resume reverse";
-
-  paras.forEach((para: ParaElement) => {
-    para.classList.add("visible");
-    if (para.anim) {
-      para.anim.progress(1).kill();
-      para.split?.revert();
-    }
-
-    para.split = new SplitText(para, {
-      type: "lines,words",
-      linesClass: "split-line",
+  // Animate paragraph elements smoothly without splitting into dozens of micro-word batches
+  const paras = document.querySelectorAll(".para");
+  if (paras.length > 0) {
+    paras.forEach((para) => {
+      const st = ScrollTrigger.create({
+        trigger: para,
+        start: "top 85%",
+        once: true,
+        animation: gsap.fromTo(
+          para,
+          { y: 25, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.7, ease: "power2.out" }
+        ),
+      });
+      splitTriggers.push(st);
     });
+  }
 
-    para.anim = gsap.fromTo(
-      para.split.words,
-      { autoAlpha: 0, y: 80 },
-      {
-        autoAlpha: 1,
-        scrollTrigger: {
-          trigger: para.parentElement?.parentElement,
-          toggleActions: ToggleAction,
-          start: TriggerStart,
-        },
-        duration: 1,
-        ease: "power3.out",
-        y: 0,
-        stagger: 0.02,
-      }
-    );
-  });
-  titles.forEach((title: ParaElement) => {
-    if (title.anim) {
-      title.anim.progress(1).kill();
-      title.split?.revert();
+  // Animate title headings with clean character reveal
+  const titles = document.querySelectorAll(".title");
+  titles.forEach((title) => {
+    const chars = splitIntoChars(title as HTMLElement);
+    if (chars.length > 0) {
+      const st = ScrollTrigger.create({
+        trigger: title,
+        start: "top 85%",
+        once: true,
+        animation: gsap.fromTo(
+          chars,
+          { y: 30, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            stagger: 0.02,
+            duration: 0.6,
+            ease: "power2.out",
+          }
+        ),
+      });
+      splitTriggers.push(st);
     }
-    title.split = new SplitText(title, {
-      type: "chars,lines",
-      linesClass: "split-line",
-    });
-    title.anim = gsap.fromTo(
-      title.split.chars,
-      { autoAlpha: 0, y: 80, rotate: 10 },
-      {
-        autoAlpha: 1,
-        scrollTrigger: {
-          trigger: title.parentElement?.parentElement,
-          toggleActions: ToggleAction,
-          start: TriggerStart,
-        },
-        duration: 0.8,
-        ease: "power2.inOut",
-        y: 0,
-        rotate: 0,
-        stagger: 0.03,
-      }
-    );
   });
+};
 
-  ScrollTrigger.addEventListener("refresh", () => setSplitText());
-}
+export const clearSplitText = () => {
+  splitTriggers.forEach((st) => st.kill());
+  splitTriggers = [];
+};

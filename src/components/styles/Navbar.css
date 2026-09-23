@@ -1,83 +1,289 @@
-.header {
-  display: flex;
-  max-width: var(--cMaxWidth);
-  width: var(--cWidth);
-  justify-content: space-between;
-  padding: 20px 0px;
-  margin-bottom: -100px;
-  box-sizing: border-box;
+/* ============================================================
+   Navbar Header Styles — Elegant Futuristic Developer Portfolio
+   ============================================================ */
+
+.navbar-header {
   position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
   top: 0;
-  z-index: 9999;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(3, 5, 8, 0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
-.header ul {
-  font-size: 12px;
+
+.navbar-header.scrolled {
+  background: rgba(3, 5, 8, 0.85);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 18px 40px;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;
+  transition: padding 0.3s ease;
+}
+
+.navbar-header.scrolled .navbar-container {
+  padding: 14px 40px;
+}
+
+/* ============================================================
+   Desktop Navigation Links + CTA
+   ============================================================ */
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right-group {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
-  column-gap: 40px;
-  row-gap: 8px;
-  align-items: end;
 }
-.header ul li {
-  margin-left: 0px;
-  letter-spacing: 1px;
-  color: #ccc;
-  font-weight: 600;
-  cursor: pointer;
-}
-.navbar-connect {
-  position: absolute;
-  display: none;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 15px;
-  letter-spacing: 1px;
+
+.navbar-link {
+  position: relative;
+  display: inline-block;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12px;
   font-weight: 500;
+  letter-spacing: 1.8px;
+  color: #94a3b8;
+  text-decoration: none;
+  padding: 6px 0;
+  transition: color 0.25s ease, text-shadow 0.25s ease;
 }
-.navbar-title {
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 0.2px;
+
+.navbar-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: #00d4ff;
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
-@media only screen and (min-width: 500px) {
-  .header {
-    padding: 20px 0px;
+
+.navbar-link:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.35);
+}
+
+.navbar-link.active {
+  color: #00d4ff;
+  text-shadow: 0 0 12px rgba(0, 212, 255, 0.5);
+}
+
+.navbar-link:hover::after,
+.navbar-link.active::after {
+  transform: scaleX(1);
+}
+
+/* ============================================================
+   Navbar CTA Button: LET'S CONNECT →
+   ============================================================ */
+
+.navbar-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  text-decoration: none;
+  color: #00d4ff;
+  background: transparent;
+  border: 1px solid rgba(0, 212, 255, 0.35);
+  padding: 8px 18px;
+  border-radius: 9999px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, color 0.25s ease, background 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.08);
+}
+
+.navbar-cta-arrow {
+  font-size: 13px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.navbar-cta-btn:hover {
+  background: rgba(0, 212, 255, 0.08);
+  border-color: #00d4ff;
+  color: #ffffff;
+  box-shadow: 0 0 18px rgba(0, 212, 255, 0.28);
+  transform: translateY(-1px);
+}
+
+.navbar-cta-btn:hover .navbar-cta-arrow {
+  transform: translateX(4px);
+}
+
+.navbar-cta-btn:active {
+  transform: translateY(0);
+}
+
+/* ============================================================
+   Mobile Toggle Button & Drawer Menu
+   ============================================================ */
+
+.navbar-mobile-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 6px 8px;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.navbar-mobile-toggle:hover {
+  border-color: #00d4ff;
+  color: #00d4ff;
+}
+
+.navbar-mobile-drawer {
+  display: none;
+}
+
+/* ============================================================
+   Responsive Queries
+   ============================================================ */
+
+@media screen and (max-width: 960px) {
+  .navbar-container {
+    padding: 16px 28px;
   }
-  .header ul {
-    flex-direction: row;
-    align-items: center;
-    font-size: 14px;
+  .navbar-links {
+    gap: 22px;
   }
-  .header ul li {
-    color: #eae5ec;
+  .navbar-right-group {
+    gap: 24px;
   }
-  .navbar-title {
-    font-size: 16px;
+  .navbar-cta-btn {
+    padding: 7px 15px;
+    font-size: 11px;
   }
 }
-@media only screen and (min-width: 900px) {
-  .navbar-connect {
+
+@media screen and (max-width: 820px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .navbar-mobile-toggle {
+    display: inline-flex;
+  }
+
+  .navbar-mobile-drawer {
     display: block;
+    max-height: 0;
+    overflow: hidden;
+    background: rgba(3, 5, 8, 0.96);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .navbar-mobile-drawer.open {
+    max-height: 360px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.7);
+  }
+
+  .mobile-drawer-inner {
+    padding: 20px 28px 24px;
+  }
+
+  .mobile-links-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .mobile-nav-link {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #94a3b8;
+    text-decoration: none;
+    display: block;
+    padding: 6px 0;
+    transition: color 0.2s ease;
+  }
+
+  .mobile-nav-link:hover,
+  .mobile-nav-link.active {
+    color: #00d4ff;
+  }
+
+  .mobile-cta-item {
+    margin-top: 10px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .mobile-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-decoration: none;
+    color: #00d4ff;
+    background: transparent;
+    border: 1px solid rgba(0, 212, 255, 0.4);
+    padding: 11px 20px;
+    border-radius: 9999px;
+    transition: all 0.25s ease;
+    box-sizing: border-box;
+  }
+
+  .mobile-cta-btn:hover {
+    background: rgba(0, 212, 255, 0.08);
+    border-color: rgba(0, 212, 255, 0.7);
+    color: #ffffff;
   }
 }
-@media only screen and (min-width: 1200px) {
-  .header {
-    padding: 35px 0px;
-  }
-  .header ul {
-    column-gap: 80px;
-    font-size: 16px;
-  }
-  .navbar-connect {
-    font-size: 16px;
-  }
-  .navbar-title {
-    font-size: 18px;
+
+@media screen and (max-width: 480px) {
+  .navbar-container {
+    padding: 14px 20px;
   }
 }

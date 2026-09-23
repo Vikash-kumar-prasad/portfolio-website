@@ -1,172 +1,92 @@
-import { useEffect, useRef } from "react";
+import { ReactNode } from "react";
+import { skills } from "../data/portfolio";
+import {
+  SiJavascript,
+  SiC,
+  SiCplusplus,
+  SiReact,
+  SiHtml5,
+  SiCss,
+  SiTailwindcss,
+  SiNodedotjs,
+  SiExpress,
+  SiPostman,
+  SiJsonwebtokens,
+  SiMongodb,
+  SiMysql,
+  SiGit,
+  SiGithub,
+  SiLinux,
+  SiDocker,
+  SiVercel,
+  SiRender,
+} from "react-icons/si";
+import { FaAws, FaCode } from "react-icons/fa6";
 import "./styles/WhatIDo.css";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+const iconMap: Record<string, ReactNode> = {
+  SiJavascript: <SiJavascript />,
+  SiC: <SiC />,
+  SiCplusplus: <SiCplusplus />,
+  SiReact: <SiReact />,
+  SiHtml5: <SiHtml5 />,
+  SiCss3: <SiCss />,
+  SiTailwindcss: <SiTailwindcss />,
+  SiNodedotjs: <SiNodedotjs />,
+  SiExpress: <SiExpress />,
+  SiPostman: <SiPostman />,
+  SiJsonwebtokens: <SiJsonwebtokens />,
+  SiMongodb: <SiMongodb />,
+  SiMysql: <SiMysql />,
+  SiGit: <SiGit />,
+  SiGithub: <SiGithub />,
+  SiLinux: <SiLinux />,
+  SiDocker: <SiDocker />,
+  SiAmazonwebservices: <FaAws />,
+  SiVisualstudiocode: <FaCode />,
+  SiVercel: <SiVercel />,
+  SiRender: <SiRender />,
+};
 
 const WhatIDo = () => {
-  const containerRef = useRef<(HTMLDivElement | null)[]>([]);
-  const setRef = (el: HTMLDivElement | null, index: number) => {
-    containerRef.current[index] = el;
-  };
-  useEffect(() => {
-    if (ScrollTrigger.isTouch) {
-      containerRef.current.forEach((container) => {
-        if (container) {
-          container.classList.remove("what-noTouch");
-          container.addEventListener("click", () => handleClick(container));
-        }
-      });
-    }
-    return () => {
-      containerRef.current.forEach((container) => {
-        if (container) {
-          container.removeEventListener("click", () => handleClick(container));
-        }
-      });
-    };
-  }, []);
   return (
-    <div className="whatIDO">
-      <div className="what-box">
-        <h2 className="title">
-          W<span className="hat-h2">HAT</span>
-          <div>
-            I<span className="do-h2"> DO</span>
-          </div>
-        </h2>
-      </div>
-      <div className="what-box">
-        <div className="what-box-in">
-          <div className="what-border2">
-            <svg width="100%">
-              <line
-                x1="0"
-                y1="0"
-                x2="0"
-                y2="100%"
-                stroke="white"
-                strokeWidth="2"
-                strokeDasharray="7,7"
-              />
-              <line
-                x1="100%"
-                y1="0"
-                x2="100%"
-                y2="100%"
-                stroke="white"
-                strokeWidth="2"
-                strokeDasharray="7,7"
-              />
-            </svg>
-          </div>
-          <div
-            className="what-content what-noTouch"
-            ref={(el) => setRef(el, 0)}
-          >
-            <div className="what-border1">
-              <svg height="100%">
-                <line
-                  x1="0"
-                  y1="0"
-                  x2="100%"
-                  y2="0"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeDasharray="6,6"
-                />
-                <line
-                  x1="0"
-                  y1="100%"
-                  x2="100%"
-                  y2="100%"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeDasharray="6,6"
-                />
-              </svg>
-            </div>
-            <div className="what-corner"></div>
+    <section className="skills-section" id="skills">
+      <div className="section-container">
+        <div className="skills-header">
+          <span className="section-eyebrow">SKILLS &amp; TECHNOLOGIES</span>
+          <h2>
+            Technical <span>Expertise</span>
+          </h2>
+          <p className="skills-subtitle">
+            A comprehensive overview of my programming languages, frameworks, developer tools, and computer science foundations.
+          </p>
+        </div>
 
-            <div className="what-content-in">
-              <h3>DEVELOP</h3>
-              <h4>Description</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae.
-              </p>
-              <h5>Skillset & tools</h5>
-              <div className="what-content-flex">
-                <div className="what-tags">JavaScript</div>
-                <div className="what-tags">TypeScript</div>
-                <div className="what-tags">Three.js</div>
-                <div className="what-tags">React</div>
-                <div className="what-tags">Css</div>
-                <div className="what-tags">Node.js</div>
-                <div className="what-tags">Next.js</div>
-                <div className="what-tags">Express.js</div>
-                <div className="what-tags">PHP</div>
-                <div className="what-tags">MySql</div>
+        <div className="skills-grid">
+          {skills.map((category, index) => (
+            <div
+              className={`skill-card ${
+                category.category === "Core CS" ? "skill-card-wide" : ""
+              }`}
+              key={index}
+            >
+              <h3 className="skill-category-title">{category.category}</h3>
+              <div className="skill-items">
+                {category.skills.map((skill, skillIndex) => (
+                  <div className="skill-tag" key={skillIndex}>
+                    {skill.icon && iconMap[skill.icon] ? (
+                      <span className="skill-icon">{iconMap[skill.icon]}</span>
+                    ) : null}
+                    <span className="skill-name">{skill.name}</span>
+                  </div>
+                ))}
               </div>
-              <div className="what-arrow"></div>
             </div>
-          </div>
-          <div
-            className="what-content what-noTouch"
-            ref={(el) => setRef(el, 1)}
-          >
-            <div className="what-border1">
-              <svg height="100%">
-                <line
-                  x1="0"
-                  y1="100%"
-                  x2="100%"
-                  y2="100%"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeDasharray="6,6"
-                />
-              </svg>
-            </div>
-            <div className="what-corner"></div>
-            <div className="what-content-in">
-              <h3>DESIGN</h3>
-              <h4>Description</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae
-              </p>
-              <h5>Skillset & tools</h5>
-              <div className="what-content-flex">
-                <div className="what-tags">Blender</div>
-                <div className="what-tags">Zbrush</div>
-                <div className="what-tags">UI Design</div>
-                <div className="what-tags">Motion</div>
-                <div className="what-tags">Rigging</div>
-                <div className="what-tags">3D Animation</div>
-                <div className="what-tags">Character Design</div>
-                <div className="what-tags">Modelling</div>
-              </div>
-              <div className="what-arrow"></div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
 export default WhatIDo;
-
-function handleClick(container: HTMLDivElement) {
-  container.classList.toggle("what-content-active");
-  container.classList.remove("what-sibling");
-  if (container.parentElement) {
-    const siblings = Array.from(container.parentElement.children);
-
-    siblings.forEach((sibling) => {
-      if (sibling !== container) {
-        sibling.classList.remove("what-content-active");
-        sibling.classList.toggle("what-sibling");
-      }
-    });
-  }
-}

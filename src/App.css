@@ -1,6 +1,13 @@
+/* Shared Section Container — Single Source of Truth for Horizontal Grid */
 .section-container {
-  width: 1300px;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-left: 36px;
+  padding-right: 36px;
+  box-sizing: border-box;
 }
+
 .title,
 .para {
   font-kerning: none;
@@ -9,20 +16,17 @@
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
-@media only screen and (max-width: 1600px) {
-  .section-container {
-    width: 1200px;
-    max-width: calc(100% - 160px);
-  }
-}
-@media only screen and (max-width: 1400px) {
-  .section-container {
-    width: 900px;
-  }
-}
+
 @media only screen and (max-width: 900px) {
   .section-container {
-    width: 500px;
-    max-width: var(--cWidth);
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .section-container {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }

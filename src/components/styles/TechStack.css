@@ -1,0 +1,273 @@
+/* ============================================================
+   TechStack Component Styles
+   ============================================================ */
+
+.techstack-section {
+  position: relative;
+  background-color: var(--backgroundColor, #0a0a0f);
+  padding: 100px 0 80px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.techstack-container {
+  width: 100%;
+}
+
+.techstack-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.techstack-header .section-eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #00d4ff;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.techstack-header h2 {
+  font-size: 42px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 12px;
+}
+
+.techstack-header h2 span {
+  color: #00d4ff;
+}
+
+.techstack-subtitle {
+  font-size: 15px;
+  color: #a1a1aa;
+  max-width: 580px;
+  margin: 0 auto 28px;
+  line-height: 1.6;
+}
+
+/* Category Filter Tabs */
+.tech-filter-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 36px;
+}
+
+.tech-filter-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #a1a1aa;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: inherit;
+}
+
+.tech-filter-btn:hover {
+  border-color: rgba(0, 212, 255, 0.3);
+  color: #e4e4e7;
+  background: rgba(0, 212, 255, 0.06);
+}
+
+.tech-filter-btn.active {
+  background: rgba(0, 212, 255, 0.12);
+  border-color: #00d4ff;
+  color: #00d4ff;
+  box-shadow: 0 0 14px rgba(0, 212, 255, 0.2);
+}
+
+/* 3D Scene Viewport (Desktop) */
+.tech-3d-wrapper {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  user-select: none;
+}
+
+.tech-canvas-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.tech-3d-stage {
+  position: relative;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+}
+
+.tech-badge-3d {
+  position: absolute;
+  width: 142px;
+  height: 50px;
+  margin-left: -71px;
+  margin-top: -25px;
+  background: rgba(18, 18, 26, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.tech-badge-3d.dimmed {
+  opacity: 0.15 !important;
+  filter: grayscale(80%);
+}
+
+.tech-badge-3d:hover,
+.tech-badge-3d.highlighted {
+  border-color: #00d4ff;
+  background-color: rgba(22, 27, 40, 0.95);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.35), 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+.tech-badge-icon {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #00d4ff;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.tech-badge-3d:hover .tech-badge-icon {
+  transform: scale(1.12);
+}
+
+.tech-badge-info {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.tech-badge-name {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tech-badge-cat {
+  font-size: 9.5px;
+  color: #a1a1aa;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Mobile 2D Grid */
+.tech-mobile-view {
+  display: none;
+  width: 100%;
+}
+
+.tech-mobile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.tech-mobile-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(18, 18, 26, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 12px 14px;
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+}
+
+.tech-mobile-card:hover,
+.tech-mobile-card.active {
+  border-color: #00d4ff;
+  background: rgba(22, 27, 40, 0.95);
+  box-shadow: 0 0 14px rgba(0, 212, 255, 0.25);
+}
+
+.tech-mobile-card.dimmed {
+  opacity: 0.25;
+}
+
+.tech-mobile-card .tech-badge-icon {
+  font-size: 22px;
+  color: #00d4ff;
+}
+
+.tech-mobile-card .tech-badge-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.tech-mobile-card .tech-badge-cat {
+  font-size: 10px;
+  color: #a1a1aa;
+}
+
+/* Responsive queries */
+@media only screen and (max-width: 900px) {
+  .techstack-section {
+    padding: 70px 0 60px;
+  }
+
+  .techstack-container {
+    padding: 0 20px;
+  }
+
+  .techstack-header h2 {
+    font-size: 32px;
+  }
+
+  .tech-3d-wrapper {
+    display: none;
+  }
+
+  .tech-mobile-view {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .tech-mobile-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .tech-mobile-card {
+    padding: 10px 12px;
+  }
+
+  .tech-mobile-card .tech-badge-name {
+    font-size: 12px;
+  }
+}

@@ -2,13 +2,12 @@
 
 :root {
   font-family: "Geist", sans-serif;
-
   font-optical-sizing: auto;
   font-style: normal;
   line-height: 1.5;
   scroll-behavior: smooth;
-  color-scheme: light dark;
-  color: #eae5ec;
+  color-scheme: dark;
+  color: #e4e4e7;
   background-color: var(--backgroundColor);
 
   font-synthesis: none;
@@ -18,43 +17,26 @@
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  --accentColor: #c2a4ff;
-  --backgroundColor: #0b080c;
+
+  /* Design System — Vikash Kumar Prasad */
+  --accentColor: #00d4ff;
+  --accentColorAlt: #0ea5e9;
+  --accentGradient: linear-gradient(135deg, #00d4ff, #0ea5e9);
+  --backgroundColor: #0a0a0f;
+  --surfaceColor: #12121a;
+  --surfaceColorAlt: #1a1a25;
+  --borderColor: rgba(255, 255, 255, 0.08);
+  --borderColorHover: rgba(0, 212, 255, 0.3);
+  --textPrimary: #e4e4e7;
+  --textSecondary: #a1a1aa;
   --vh: 100vh;
   --vh: 100svh;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+
+h1, h2, h3, h4, h5, h6 {
   font-family: "Geist", sans-serif;
 }
-body {
-  overflow: hidden;
-}
-a {
-  color: inherit;
-  text-decoration: inherit;
-}
-a:hover {
-  color: var(--accentColor);
-}
-main {
-  opacity: 1;
-  transition: 0.3s;
-}
-.main-active {
-  opacity: 0;
-  animation: fadeIn 1s 1;
-  animation-fill-mode: forwards;
-}
-@keyframes fadeIn {
-  100% {
-    opacity: 1;
-  }
-}
+
 body {
   margin: 0;
   height: auto;
@@ -65,50 +47,46 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
 }
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: var(--accentColor);
+}
+
+main {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.main-active {
+  opacity: 0;
+  animation: fadeIn 1s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
 .main-body {
   max-width: 100vw;
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
-.container-main {
+.container-main,
+#smooth-wrapper,
+#smooth-content {
   width: 100%;
   margin: auto;
   position: relative;
-}
-.container1 {
-  width: var(--cWidth);
-  height: var(--vh);
-  margin: auto;
-  position: relative;
-}
-.split-line {
-  overflow: hidden;
-}
-.split-h2 {
-  overflow: hidden;
-  display: flex;
-  white-space: nowrap;
-  flex-wrap: nowrap;
-}
-
-.techstack {
-  width: 100%;
-  position: relative;
-  height: var(--vh);
-  margin: auto;
-  margin-top: 50px;
-  margin-bottom: -100px;
-}
-
-.techstack h2 {
-  font-size: 80px;
-  text-align: center;
-  position: absolute;
-  width: 100%;
-  top: 120px;
-  left: 0;
-  font-weight: 400;
-  text-transform: uppercase;
 }
 
 @media screen and (min-width: 768px) {
@@ -116,8 +94,16 @@ body {
     --cWidth: 94%;
   }
 }
-@media screen and (max-width: 900px) {
-  .techstack h2 {
-    font-size: 40px;
+
+/* Accessibility: prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
+
