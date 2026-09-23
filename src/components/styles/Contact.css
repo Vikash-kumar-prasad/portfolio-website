@@ -25,9 +25,9 @@
 }
 
 .contact-left .section-eyebrow {
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 2.5px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: #00d4ff;
   display: block;
@@ -35,11 +35,11 @@
 }
 
 .contact-heading {
-  font-size: 46px;
-  font-weight: 500;
+  font-size: clamp(26px, 2.8vw, 36px);
+  font-weight: 600;
   color: #ffffff;
-  margin: 0 0 16px;
-  line-height: 1.15;
+  margin: 0 0 12px;
+  line-height: 1.22;
 }
 
 .contact-heading span {
@@ -47,11 +47,11 @@
 }
 
 .contact-invitation {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.6;
   color: #a1a1aa;
-  margin: 0 0 32px;
-  max-width: 480px;
+  margin: 0 0 24px;
+  max-width: 460px;
 }
 
 .contact-methods {
@@ -169,8 +169,8 @@
 .contact-form-card {
   background: rgba(18, 18, 26, 0.75);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 32px 28px;
+  border-radius: 12px;
+  padding: 24px 22px;
   box-sizing: border-box;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -178,10 +178,10 @@
 }
 
 .form-title {
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 600;
   color: #ffffff;
-  margin: 0 0 20px;
+  margin: 0 0 16px;
 }
 
 .contact-form {

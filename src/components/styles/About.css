@@ -5,8 +5,8 @@
 .about-section {
   position: relative;
   background-color: var(--backgroundColor, #0a0a0f);
-  padding: 105px 0 90px;
-  min-height: calc(100vh - 70px);
+  padding: 80px 0 65px;
+  min-height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,17 +17,17 @@
 
 .about-container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding-left: 48px;
-  padding-right: 48px;
+  padding-left: 40px;
+  padding-right: 40px;
   box-sizing: border-box;
 }
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 60px;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 52px;
   align-items: center;
   width: 100%;
   box-sizing: border-box;
@@ -38,34 +38,34 @@
 }
 
 .about-main-col .section-eyebrow {
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 2.8px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: #00d4ff;
   display: inline-block;
-  margin-bottom: 22px;
+  margin-bottom: 14px;
 }
 
 .about-heading {
-  font-size: clamp(36px, 4vw, 52px);
+  font-size: clamp(26px, 2.8vw, 36px);
   font-weight: 700;
   color: #ffffff;
-  margin: 0 0 32px;
-  line-height: 1.18;
-  letter-spacing: -0.6px;
+  margin: 0 0 20px;
+  line-height: 1.25;
+  letter-spacing: -0.4px;
 }
 
 .about-text-wrap {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  max-width: 550px;
+  gap: 16px;
+  max-width: 520px;
 }
 
 .about-para {
-  font-size: 18px;
-  line-height: 1.84;
+  font-size: 15px;
+  line-height: 1.7;
   color: #cbd5e1;
   margin: 0;
   font-weight: 400;
@@ -83,22 +83,22 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 520px;
+  max-width: 440px;
   background: rgba(15, 17, 24, 0.78);
-  border: 1px solid rgba(0, 212, 255, 0.22);
-  border-radius: 20px;
-  padding: 38px 36px 30px 36px;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 14px;
+  padding: 26px 24px 20px 24px;
   box-sizing: border-box;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5), 0 0 28px rgba(0, 212, 255, 0.07);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45), 0 0 20px rgba(0, 212, 255, 0.05);
   overflow: hidden;
   transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .about-engineering-card:hover {
-  border-color: rgba(0, 212, 255, 0.45);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 36px rgba(0, 212, 255, 0.14);
+  border-color: rgba(0, 212, 255, 0.4);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.55), 0 0 26px rgba(0, 212, 255, 0.1);
   transform: translateY(-2px);
 }
 
@@ -106,69 +106,69 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 18px;
-  margin-bottom: 22px;
+  padding-bottom: 14px;
+  margin-bottom: 18px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .about-card-status {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .status-indicator {
-  width: 9px;
-  height: 9px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background-color: #00d4ff;
-  box-shadow: 0 0 10px #00d4ff;
+  box-shadow: 0 0 8px #00d4ff;
   display: inline-block;
 }
 
 .status-label {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 2.2px;
+  letter-spacing: 1.8px;
   color: #00d4ff;
   text-transform: uppercase;
 }
 
 .about-card-code {
-  font-size: 12.5px;
+  font-size: 11px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   color: #94a3b8;
-  letter-spacing: 1.2px;
+  letter-spacing: 1px;
   font-weight: 500;
 }
 
 .about-card-body {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 
 .about-info-item {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
   text-align: left;
 }
 
 .info-label {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 11.5px;
+  font-size: 10px;
   text-transform: uppercase;
-  letter-spacing: 1.8px;
+  letter-spacing: 1.6px;
   color: #94a3b8;
   font-weight: 600;
 }
 
 .info-value {
-  font-size: 16px;
+  font-size: 13.5px;
   color: #f1f5f9;
-  line-height: 1.45;
+  line-height: 1.4;
   font-weight: 600;
 }
 
@@ -183,8 +183,8 @@
   display: inline-block;
   color: #00d4ff;
   opacity: 0.65;
-  margin: 0 14px;
-  font-size: 16px;
+  margin: 0 10px;
+  font-size: 13px;
   line-height: 1;
   user-select: none;
 }
@@ -192,9 +192,9 @@
 .about-card-footer {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 24px;
-  padding-top: 20px;
+  gap: 8px;
+  margin-top: 18px;
+  padding-top: 16px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -205,12 +205,12 @@
   background: rgba(0, 212, 255, 0.04);
   color: #7dd3fc;
   border: 1px solid rgba(0, 212, 255, 0.18);
-  padding: 6px 10px;
-  border-radius: 8px;
+  padding: 5px 8px;
+  border-radius: 6px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 10.5px;
+  font-size: 9.5px;
   font-weight: 500;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
   transition: all 0.25s ease;
 }
 
@@ -225,41 +225,41 @@
    ============================================================ */
 @media only screen and (max-width: 1150px) {
   .about-container {
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   .about-grid {
-    gap: 48px;
+    gap: 40px;
   }
 
   .about-heading {
-    font-size: clamp(34px, 3.8vw, 48px);
-    margin-bottom: 28px;
+    font-size: clamp(24px, 2.6vw, 32px);
+    margin-bottom: 18px;
   }
 
   .about-para {
-    font-size: 17.5px;
+    font-size: 14.5px;
   }
 
   .about-engineering-card {
-    padding: 34px 28px 26px 28px;
+    padding: 24px 20px 18px;
   }
 
   .about-card-body {
-    gap: 20px;
+    gap: 14px;
   }
 }
 
 @media only screen and (max-width: 960px) {
   .about-section {
-    padding: 90px 0 70px;
+    padding: 70px 0 55px;
     min-height: auto;
   }
 
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 52px;
+    gap: 40px;
   }
 
   .about-main-col {
@@ -268,7 +268,7 @@
 
   .about-text-wrap {
     max-width: 100%;
-    gap: 22px;
+    gap: 14px;
   }
 
   .about-card-col {
@@ -282,40 +282,40 @@
 
 @media only screen and (max-width: 768px) {
   .about-section {
-    padding: 80px 0 60px;
+    padding: 60px 0 45px;
   }
 
   .about-container {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .about-heading {
-    font-size: 32px;
-    margin-bottom: 22px;
+    font-size: 26px;
+    margin-bottom: 16px;
   }
 
   .about-para {
-    font-size: 16.5px;
-    line-height: 1.72;
+    font-size: 14px;
+    line-height: 1.65;
   }
 
   .about-engineering-card {
-    padding: 28px 22px 24px 22px;
+    padding: 22px 18px;
   }
 
   .about-card-body {
-    gap: 18px;
+    gap: 14px;
   }
 
   .info-value {
-    font-size: 15.5px;
+    font-size: 13px;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .about-section {
-    padding: 70px 0 50px;
+    padding: 55px 0 40px;
   }
 
   .about-container {

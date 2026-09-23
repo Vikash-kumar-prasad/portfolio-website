@@ -24,9 +24,9 @@
 
 .navbar-container {
   width: 100%;
-  max-width: 1320px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 18px 40px;
+  padding: 13px 36px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -35,7 +35,7 @@
 }
 
 .navbar-header.scrolled .navbar-container {
-  padding: 14px 40px;
+  padding: 10px 36px;
 }
 
 /* ============================================================
@@ -66,12 +66,12 @@
   position: relative;
   display: inline-block;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 500;
-  letter-spacing: 1.8px;
+  letter-spacing: 1.6px;
   color: #94a3b8;
   text-decoration: none;
-  padding: 6px 0;
+  padding: 5px 0;
   transition: color 0.25s ease, text-shadow 0.25s ease;
 }
 
@@ -111,16 +111,16 @@
 .navbar-cta-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 7px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 11.5px;
+  font-size: 10.5px;
   font-weight: 600;
-  letter-spacing: 1.6px;
+  letter-spacing: 1.5px;
   text-decoration: none;
   color: #00d4ff;
   background: transparent;
   border: 1px solid rgba(0, 212, 255, 0.35);
-  padding: 8px 18px;
+  padding: 6px 15px;
   border-radius: 9999px;
   transition: border-color 0.25s ease, box-shadow 0.25s ease, color 0.25s ease, background 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 0 10px rgba(0, 212, 255, 0.08);

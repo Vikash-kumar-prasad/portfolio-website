@@ -3,7 +3,7 @@
    ============================================================ */
 
 .education-section {
-  padding: 100px 0 80px;
+  padding: 80px 0 65px;
   background-color: var(--backgroundColor, #0a0a0f);
   color: #fff;
   width: 100%;
@@ -12,14 +12,14 @@
 }
 
 .education-header {
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   text-align: left;
 }
 
 .education-header .section-eyebrow {
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 2.5px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: #00d4ff;
   display: block;
@@ -27,11 +27,11 @@
 }
 
 .education-header h2 {
-  font-size: 42px;
-  font-weight: 500;
+  font-size: clamp(26px, 2.8vw, 36px);
+  font-weight: 600;
   color: #ffffff;
   margin: 0;
-  line-height: 1.2;
+  line-height: 1.22;
 }
 
 .education-header h2 span {
@@ -41,7 +41,7 @@
 .education-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  gap: 18px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -49,8 +49,8 @@
 .card {
   background: rgba(18, 18, 26, 0.75);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 14px;
-  padding: 28px 24px;
+  border-radius: 12px;
+  padding: 22px 20px;
   box-sizing: border-box;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);

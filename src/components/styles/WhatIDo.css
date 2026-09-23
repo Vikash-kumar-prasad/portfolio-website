@@ -3,7 +3,7 @@
    ============================================================ */
 
 .skills-section {
-  padding: 100px 0 80px;
+  padding: 80px 0 65px;
   width: 100%;
   box-sizing: border-box;
   position: relative;
@@ -11,14 +11,14 @@
 }
 
 .skills-header {
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   text-align: left;
 }
 
 .skills-header .section-eyebrow {
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 2.5px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: #00d4ff;
   display: block;
@@ -26,11 +26,11 @@
 }
 
 .skills-header h2 {
-  font-size: 42px;
-  font-weight: 500;
+  font-size: clamp(26px, 2.8vw, 36px);
+  font-weight: 600;
   color: #ffffff;
-  margin: 0 0 10px;
-  line-height: 1.2;
+  margin: 0 0 8px;
+  line-height: 1.22;
 }
 
 .skills-header h2 span {
@@ -38,9 +38,9 @@
 }
 
 .skills-subtitle {
-  font-size: 15px;
+  font-size: 14px;
   color: #a1a1aa;
-  max-width: 620px;
+  max-width: 580px;
   margin: 0;
   line-height: 1.6;
 }
@@ -49,7 +49,7 @@
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 18px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -57,8 +57,8 @@
 .skill-card {
   background: rgba(18, 18, 26, 0.75);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  padding: 22px 20px;
+  border-radius: 10px;
+  padding: 18px 18px;
   box-sizing: border-box;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
