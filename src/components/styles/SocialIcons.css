@@ -25,11 +25,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   color: var(--textSecondary, #a1a1aa);
-  font-size: 19px;
+  font-size: 16px;
   transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
   text-decoration: none;
 }
