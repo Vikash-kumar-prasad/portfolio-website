@@ -172,26 +172,18 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "StockLedger — Inventory Management System",
+    title: "AI-Based Smart Crowd Safety and Threat Detection System",
     description:
-      "A full-stack inventory management system built using React.js, Node.js, Express.js, and MySQL with JWT-based authentication.",
-    tech: [
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "MySQL",
-      "Tailwind CSS",
-      "JWT",
-    ],
+      "A real-time computer vision system combining custom-trained YOLOv8 models and optical flow analysis for crowd monitoring, weapon detection, and automated hazard alerts.",
+    tech: ["Python", "YOLOv8", "OpenCV", "Flask", "Deep Learning", "NumPy"],
     features: [
-      "Product and supplier management with CRUD operations",
-      "Stock movements and transaction history tracking",
-      "Responsive dashboard with inventory analytics",
-      "Low-stock alerts and advanced search/filtering",
-      "Image uploads and role-based access control",
-      "JWT authentication",
+      "Custom YOLOv8 head detection and spatial grid crowd density estimation",
+      "Weapon detection (guns, knives) with body-proximity false positive filtering",
+      "Farneback optical flow for behavioral anomaly detection (stampedes, dispersals)",
+      "Multi-factor rule-based risk engine (Low to Critical) with automated alerts",
+      "Real-time command center dashboard with live annotated MJPEG stream",
     ],
-    liveDemo: "https://stockledger-inventory-app.vercel.app/",
+    github: "https://github.com/Vikash-kumar-prasad/crowd-safety-system",
   },
 ];
 
