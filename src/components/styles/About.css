@@ -5,7 +5,7 @@
 .about-section {
   position: relative;
   background-color: var(--backgroundColor, #0a0a0f);
-  padding: 80px 0 65px;
+  padding: 120px 0 85px;
   min-height: auto;
   display: flex;
   align-items: center;
@@ -28,7 +28,7 @@
   display: grid;
   grid-template-columns: 1.15fr 1fr;
   gap: 52px;
-  align-items: center;
+  align-items: start;
   width: 100%;
   box-sizing: border-box;
 }
@@ -77,6 +77,7 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  margin-top: 14px;
 }
 
 .about-engineering-card {
@@ -253,13 +254,13 @@
 
 @media only screen and (max-width: 960px) {
   .about-section {
-    padding: 70px 0 55px;
+    padding: 105px 0 70px;
     min-height: auto;
   }
 
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
   }
 
   .about-main-col {
@@ -272,17 +273,19 @@
   }
 
   .about-card-col {
-    justify-content: flex-start;
+    justify-content: center;
+    margin-top: 10px;
   }
 
   .about-engineering-card {
-    max-width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .about-section {
-    padding: 60px 0 45px;
+    padding: 95px 0 60px;
   }
 
   .about-container {
@@ -300,8 +303,14 @@
     line-height: 1.65;
   }
 
+  .about-card-col {
+    justify-content: center;
+    margin-top: 8px;
+  }
+
   .about-engineering-card {
     padding: 22px 18px;
+    max-width: 100%;
   }
 
   .about-card-body {
@@ -315,7 +324,7 @@
 
 @media only screen and (max-width: 480px) {
   .about-section {
-    padding: 55px 0 40px;
+    padding: 85px 0 50px;
   }
 
   .about-container {
