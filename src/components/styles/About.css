@@ -5,7 +5,7 @@
 .about-section {
   position: relative;
   background-color: var(--backgroundColor, #0a0a0f);
-  padding: 120px 0 85px;
+  padding: 80px 0 65px;
   min-height: auto;
   display: flex;
   align-items: center;
@@ -254,7 +254,7 @@
 
 @media only screen and (max-width: 960px) {
   .about-section {
-    padding: 105px 0 70px;
+    padding: 70px 0 55px;
     min-height: auto;
   }
 
@@ -285,7 +285,7 @@
 
 @media only screen and (max-width: 768px) {
   .about-section {
-    padding: 95px 0 60px;
+    padding: 60px 0 45px;
   }
 
   .about-container {
@@ -324,7 +324,7 @@
 
 @media only screen and (max-width: 480px) {
   .about-section {
-    padding: 85px 0 50px;
+    padding: 55px 0 40px;
   }
 
   .about-container {
