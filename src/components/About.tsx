@@ -89,7 +89,7 @@ const About = ({ children }: PropsWithChildren) => {
               <div className="about-card-footer">
                 <span className="about-badge">Clean Code</span>
                 <span className="about-badge">RESTful APIs</span>
-                <span className="about-badge">JWT Security</span>
+                <span className="about-badge">Cybersecurity</span>
               </div>
             </div>
           </div>

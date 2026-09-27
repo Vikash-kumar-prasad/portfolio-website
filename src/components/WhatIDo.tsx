@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { skills } from "../data/portfolio";
 import {
   SiJavascript,
+  SiPython,
   SiC,
   SiCplusplus,
   SiReact,
@@ -10,6 +11,7 @@ import {
   SiTailwindcss,
   SiNodedotjs,
   SiExpress,
+  SiFlask,
   SiPostman,
   SiJsonwebtokens,
   SiMongodb,
@@ -25,6 +27,7 @@ import { FaAws, FaCode } from "react-icons/fa6";
 import "./styles/WhatIDo.css";
 
 const iconMap: Record<string, ReactNode> = {
+  SiPython: <SiPython />,
   SiJavascript: <SiJavascript />,
   SiC: <SiC />,
   SiCplusplus: <SiCplusplus />,
@@ -34,6 +37,7 @@ const iconMap: Record<string, ReactNode> = {
   SiTailwindcss: <SiTailwindcss />,
   SiNodedotjs: <SiNodedotjs />,
   SiExpress: <SiExpress />,
+  SiFlask: <SiFlask />,
   SiPostman: <SiPostman />,
   SiJsonwebtokens: <SiJsonwebtokens />,
   SiMongodb: <SiMongodb />,

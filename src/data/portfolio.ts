@@ -24,18 +24,18 @@ export const personalInfo = {
 // --- About Section ---
 export const aboutContent = {
   label: "ABOUT ME",
-  heading: "Building scalable systems & intelligent web applications.",
+  heading: "Building scalable backend architectures & applied AI systems.",
   paragraphs: [
-    "I'm a B.Tech Computer Science student at Sikkim Manipal Institute of Technology, graduating in 2027. I build full-stack web applications from the ground up — from designing RESTful APIs and implementing secure authentication on the backend to creating responsive interfaces with React.",
-    "My core stack is MERN (MongoDB, Express.js, React, Node.js), with hands-on experience integrating AI/LLM APIs, Docker, and cloud deployment workflows. I'm particularly interested in backend engineering, AI-powered applications, and building clean, scalable software.",
+    "I'm a B.Tech Computer Science student at Sikkim Manipal Institute of Technology (graduating in 2027) focused on building scalable web applications and applied AI systems. My experience ranges from architecting RESTful APIs and secure microservices on the backend to developing computer vision pipelines and integrating LLMs.",
+    "My core stack encompasses Python, Node.js, Express.js, Flask, and the MERN stack, backed by hands-on engineering with custom computer vision models (YOLOv8, OpenCV), Groq LLM API, Docker, and AWS cloud workflows. I focus on backend engineering, cybersecurity fundamentals, and shipping clean, production-ready code.",
   ],
   profileCard: {
     title: "ENGINEERING PROFILE",
     degree: "Bachelor of Technology in Computer Science",
     institution: "Sikkim Manipal Institute of Technology, Sikkim",
     timeline: "July 2023 — 2027",
-    primaryStack: "MERN",
-    aiAndCloud: "Groq API   ·   Docker   ·   AWS",
+    primaryStack: "Python   ·   MERN   ·   Flask",
+    aiAndCloud: "YOLOv8   ·   Docker   ·   AWS",
   },
 };
 
@@ -54,6 +54,7 @@ export const skills: SkillCategory[] = [
   {
     category: "Languages",
     skills: [
+      { name: "Python", icon: "SiPython" },
       { name: "JavaScript", icon: "SiJavascript" },
       { name: "C", icon: "SiC" },
       { name: "C++", icon: "SiCplusplus" },
@@ -74,6 +75,7 @@ export const skills: SkillCategory[] = [
     skills: [
       { name: "Node.js", icon: "SiNodedotjs" },
       { name: "Express.js", icon: "SiExpress" },
+      { name: "Flask", icon: "SiFlask" },
       { name: "REST APIs", icon: "SiPostman" },
       { name: "JWT Auth", icon: "SiJsonwebtokens" },
     ],
@@ -81,8 +83,8 @@ export const skills: SkillCategory[] = [
   {
     category: "Databases",
     skills: [
-      { name: "MongoDB", icon: "SiMongodb" },
       { name: "MySQL", icon: "SiMysql" },
+      { name: "MongoDB", icon: "SiMongodb" },
     ],
   },
   {
@@ -107,11 +109,12 @@ export const skills: SkillCategory[] = [
   {
     category: "Core CS",
     skills: [
+      { name: "Data Structures & Algorithms" },
       { name: "DBMS" },
       { name: "Operating Systems" },
       { name: "Computer Networks" },
       { name: "OOP" },
-      { name: "DSA" },
+      { name: "Cybersecurity" },
     ],
   },
 ];
@@ -133,14 +136,14 @@ export const projects: Project[] = [
     id: 1,
     title: "AI-Powered Document Extraction Engine",
     description:
-      "An AI-powered document extraction platform combining OCR and the Groq LLM to convert unstructured invoices into structured JSON automatically.",
+      "An automated document parsing pipeline combining OCR and the Groq LLM API to convert unstructured PDF invoices into validated JSON in under 2 seconds.",
     tech: ["Node.js", "Express.js", "React.js", "OCR", "MongoDB", "Groq API"],
     features: [
-      "AI-powered document extraction pipeline",
-      "RESTful APIs for document upload, OCR processing, and validation",
-      "End-to-end extraction pipeline with prompt engineering",
-      "Schema validation and structured JSON output",
-      "Robust backend error handling",
+      "Automated document parsing pipeline extracting structured JSON from unstructured PDF invoices in <2s",
+      "Modular Express.js & MongoDB RESTful APIs managing multi-file uploads and asynchronous OCR text extraction",
+      "Robust JSON schema validation and prompt pipelines, reducing malformed LLM responses to <1%",
+      "Fail-safe backend error handling with prompt engineering for deterministic schema output",
+      "Modern responsive interface with document preview, extraction review, and verified data exports",
     ],
     github:
       "https://github.com/Vikash-kumar-prasad/document-extraction-engine",
@@ -150,7 +153,7 @@ export const projects: Project[] = [
     id: 2,
     title: "AI Quiz Builder",
     description:
-      "An AI-powered quiz generation platform that dynamically creates multiple-choice quizzes from user-provided topics using the Groq LLM API.",
+      "An interactive AI-driven assessment platform that dynamically generates topic-specific quizzes with custom difficulty scaling using the Groq LLM API.",
     tech: [
       "React.js",
       "Node.js",
@@ -160,12 +163,11 @@ export const projects: Project[] = [
       "Tailwind CSS",
     ],
     features: [
-      "Dynamic AI-powered quiz generation",
-      "Interactive quiz-taking interface",
-      "Automatic answer evaluation and score calculation",
-      "Result visualization",
-      "Prompt engineering with structured response parsing",
-      "Responsive UI",
+      "Interactive AI-driven assessment platform using Groq LLM for dynamic quizzes with custom difficulty scaling",
+      "Structured prompt schemas enforcing strict JSON output for deterministic, parsing-error-free generation",
+      "Responsive React.js SPA with client-side state for timed quiz-taking, instant answer evaluation, and scoring",
+      "Visual performance analytics and score computation with category-level mastery breakdowns",
+      "Robust error handling and validation preventing hallucinated or incomplete quiz schemas",
     ],
     liveDemo: "https://ai-quiz-builder-six.vercel.app",
     backend: "https://ai-quiz-builder-8gpv.onrender.com",
@@ -174,14 +176,14 @@ export const projects: Project[] = [
     id: 3,
     title: "AI-Based Smart Crowd Safety and Threat Detection System",
     description:
-      "A real-time computer vision system combining custom-trained YOLOv8 models and optical flow analysis for crowd monitoring, weapon detection, and automated hazard alerts.",
-    tech: ["Python", "YOLOv8", "OpenCV", "Flask", "Deep Learning", "NumPy"],
+      "An edge AI surveillance platform combining dual custom-trained YOLOv8 models and Farneback optical flow for crowd density estimation, lethal weapon detection, and automated hazard alerts.",
+    tech: ["Python", "YOLOv8", "OpenCV", "Flask", "Computer Vision"],
     features: [
-      "Custom YOLOv8 head detection and spatial grid crowd density estimation",
-      "Weapon detection (guns, knives) with body-proximity false positive filtering",
-      "Farneback optical flow for behavioral anomaly detection (stampedes, dispersals)",
-      "Multi-factor rule-based risk engine (Low to Critical) with automated alerts",
-      "Real-time command center dashboard with live annotated MJPEG stream",
+      "Dual custom-trained YOLOv8 models achieving 92.89% mAP@50 (head counting) and 87.46% precision (weapons)",
+      "Real-time 4x6 grid crowd density mapping with Gaussian heatmaps and Farneback optical flow in <40 ms",
+      "Velocity surge and panic anomaly detection to identify stampedes and rapid dispersals automatically",
+      "Multi-threaded Flask backend sustaining 28+ FPS live MJPEG streaming with Police CAD Emergency Dispatch",
+      "Real-time command center dashboard with live threat monitoring and CSV audit log exports",
     ],
     github: "https://github.com/Vikash-kumar-prasad/crowd-safety-system",
   },
@@ -201,9 +203,8 @@ export interface Certification {
 }
 
 export const certifications: Certification[] = [
+  { title: "Ethical Hacking Essentials (EHE)", issuer: "EC-Council (Coursera)" },
   { title: "Complete Web Development Course", issuer: "Udemy" },
-  { title: "Introduction to Internet of Things", issuer: "NPTEL" },
-  { title: "Embedded Systems", issuer: "NPTEL" },
 ];
 
 // --- Leadership / Extracurricular ---
