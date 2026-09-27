@@ -8,7 +8,7 @@
   min-height: auto;
   background-color: #050608;
   border-top: 1px solid rgba(255, 255, 255, 0.07);
-  padding: 95px 0 48px;
+  padding: 56px 0 36px;
   box-sizing: border-box;
 }
 
@@ -33,9 +33,9 @@
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 0 36px;
+  padding: 0 32px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -44,25 +44,25 @@
 }
 
 /* ============================================================
-   1. CTA SECTION (Upper area of the footer)
+   1. CTA SECTION (Upper ~45–50% of the section)
    ============================================================ */
 
 .footer-cta-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   width: 100%;
 }
 
 .footer-headline {
   font-family: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: clamp(30px, 3.4vw, 44px);
+  font-size: clamp(22px, 2.4vw, 32px);
   font-weight: 700;
-  line-height: 1.22;
-  letter-spacing: 1.5px;
+  line-height: 1.25;
+  letter-spacing: 1.2px;
   color: #ffffff;
-  margin: 0 0 16px;
+  margin: 0 0 12px;
   text-transform: uppercase;
 }
 
@@ -76,35 +76,35 @@
 }
 
 .footer-subheadline {
-  font-size: 15.5px;
-  line-height: 1.65;
+  font-size: 13.5px;
+  line-height: 1.6;
   color: #94a3b8;
-  margin: 0 0 30px;
-  max-width: 580px;
+  margin: 0 0 22px;
+  max-width: 500px;
   letter-spacing: 0.2px;
 }
 
 .footer-primary-cta {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   background: rgba(8, 14, 24, 0.85);
   color: #ffffff;
-  border: 1.4px solid #00d4ff;
-  padding: 13px 32px;
+  border: 1.2px solid #00d4ff;
+  padding: 10px 24px;
   border-radius: 9999px;
-  font-size: 13px;
+  font-size: 11.5px;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 0 18px rgba(0, 212, 255, 0.2), inset 0 0 10px rgba(0, 212, 255, 0.05);
+  box-shadow: 0 0 16px rgba(0, 212, 255, 0.16), inset 0 0 10px rgba(0, 212, 255, 0.05);
   backdrop-filter: blur(8px);
 }
 
 .cta-arrow {
-  font-size: 16px;
+  font-size: 14px;
   color: #00d4ff;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
 }
@@ -114,7 +114,7 @@
   color: #050608;
   border-color: #00d4ff;
   transform: translateY(-2px);
-  box-shadow: 0 0 26px rgba(0, 212, 255, 0.5), 0 6px 18px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 24px rgba(0, 212, 255, 0.45), 0 6px 16px rgba(0, 0, 0, 0.5);
 }
 
 .footer-primary-cta:hover .cta-arrow {
@@ -129,7 +129,7 @@
 .footer-divider-line {
   position: relative;
   width: 100%;
-  max-width: 600px;
+  max-width: 480px;
   height: 1px;
   background: linear-gradient(
     90deg,
@@ -139,16 +139,16 @@
     rgba(255, 255, 255, 0.08) 75%,
     transparent
   );
-  margin: 0 auto 44px;
+  margin: 0 auto 36px;
 }
 
 .divider-glow-dot {
   position: absolute;
-  top: -3px;
+  top: -2.5px;
   left: 50%;
   transform: translateX(-50%);
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background-color: #00d4ff;
   box-shadow: 0 0 8px #00d4ff, 0 0 14px rgba(0, 212, 255, 0.5);
@@ -162,40 +162,40 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 38px;
+  margin-bottom: 32px;
   width: 100%;
 }
 
 .footer-brand-title {
   font-family: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 700;
-  letter-spacing: 2.8px;
+  letter-spacing: 2.2px;
   color: #ffffff;
-  margin: 0 0 20px;
+  margin: 0 0 16px;
   text-transform: uppercase;
 }
 
 .footer-brand-subtitle {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
   letter-spacing: 2.8px;
   color: #00d4ff;
-  margin: 0 0 22px;
+  margin: 0 0 20px;
   text-transform: uppercase;
 }
 
 /* Navigation Row */
 .footer-nav {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .footer-nav-links {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 32px;
+  gap: 24px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -203,13 +203,13 @@
 }
 
 .footer-nav-item {
-  font-size: 12.5px;
+  font-size: 11px;
   font-weight: 500;
-  letter-spacing: 1.8px;
+  letter-spacing: 1.6px;
   color: #94a3b8;
   text-decoration: none;
   transition: color 0.25s ease, text-shadow 0.25s ease;
-  padding: 4px 0;
+  padding: 3px 0;
 }
 
 .footer-nav-item:hover {
@@ -222,20 +222,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 12px;
 }
 
 .footer-social-icon-btn {
-  width: 38px;
-  height: 38px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: rgba(18, 22, 34, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(18, 22, 34, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: #94a3b8;
-  font-size: 16px;
+  font-size: 13px;
   text-decoration: none;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -243,9 +243,9 @@
 .footer-social-icon-btn:hover {
   border-color: #00d4ff;
   color: #00d4ff;
-  background: rgba(0, 212, 255, 0.14);
+  background: rgba(0, 212, 255, 0.12);
   transform: translateY(-2px);
-  box-shadow: 0 0 16px rgba(0, 212, 255, 0.35);
+  box-shadow: 0 0 14px rgba(0, 212, 255, 0.3);
 }
 
 /* ============================================================
@@ -255,8 +255,8 @@
 .footer-bottom-divider {
   width: 100%;
   height: 1px;
-  background: rgba(255, 255, 255, 0.08);
-  margin: 0 0 26px;
+  background: rgba(255, 255, 255, 0.07);
+  margin: 0 0 20px;
 }
 
 /* ============================================================
@@ -269,13 +269,13 @@
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  gap: 20px;
+  gap: 16px;
 }
 
 .bottom-col {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
 }
 
 .bottom-left {
@@ -286,7 +286,7 @@
 .bottom-center {
   align-items: center;
   text-align: center;
-  gap: 6px;
+  gap: 5px;
 }
 
 .bottom-right {
@@ -295,7 +295,7 @@
 }
 
 .bottom-copy {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 500;
   color: #cbd5e1;
   letter-spacing: 0.2px;
@@ -303,7 +303,7 @@
 }
 
 .bottom-sub {
-  font-size: 11px;
+  font-size: 10px;
   color: #64748b;
   letter-spacing: 0.2px;
   line-height: 1.4;
@@ -311,9 +311,9 @@
 
 .motto-text {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
   color: #00d4ff;
   line-height: 1.2;
 }
@@ -322,21 +322,21 @@
 .footer-scroll-top-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   background: transparent;
-  border: 1px solid rgba(0, 212, 255, 0.28);
+  border: 1px solid rgba(0, 212, 255, 0.25);
   border-radius: 9999px;
-  padding: 4px 12px;
+  padding: 3px 10px;
   color: #94a3b8;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 0.8px;
   cursor: pointer;
   transition: all 0.25s ease;
 }
 
 .scroll-arrow-icon {
-  font-size: 13px;
+  font-size: 11px;
   color: #00d4ff;
   transition: transform 0.25s ease;
 }
@@ -345,7 +345,7 @@
   border-color: #00d4ff;
   color: #00d4ff;
   background: rgba(0, 212, 255, 0.08);
-  box-shadow: 0 0 12px rgba(0, 212, 255, 0.25);
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
   transform: translateY(-1px);
 }
 
@@ -359,48 +359,44 @@
 
 @media screen and (max-width: 900px) {
   .footer-site {
-    padding: 80px 0 44px;
+    padding: 80px 0 52px;
   }
 
   .footer-container {
-    padding: 0 28px;
+    padding: 0 24px;
   }
 
   .footer-headline {
-    font-size: clamp(26px, 4vw, 36px);
-  }
-
-  .footer-subheadline {
-    font-size: 14.5px;
+    font-size: clamp(26px, 4.5vw, 36px);
   }
 
   .footer-nav-links {
-    gap: 26px;
+    gap: 24px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .footer-site {
-    padding: 70px 0 42px;
+    padding: 68px 0 52px;
   }
 
   .footer-cta-section {
-    margin-bottom: 36px;
+    margin-bottom: 44px;
   }
 
   .footer-divider-line {
-    margin-bottom: 36px;
+    margin-bottom: 40px;
   }
 
   .footer-brand-section {
-    margin-bottom: 32px;
+    margin-bottom: 36px;
   }
 
   .footer-bottom-bar {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 20px;
+    gap: 22px;
   }
 
   .bottom-left,
@@ -413,38 +409,38 @@
 
 @media screen and (max-width: 480px) {
   .footer-site {
-    padding: 60px 0 38px;
+    padding: 56px 0 48px;
   }
 
   .footer-container {
-    padding: 0 20px;
+    padding: 0 18px;
   }
 
   .footer-headline {
     font-size: 24px;
-    letter-spacing: 1.2px;
+    letter-spacing: 1px;
   }
 
   .footer-subheadline {
     font-size: 14px;
-    margin-bottom: 24px;
+    margin-bottom: 26px;
   }
 
   .footer-primary-cta {
-    padding: 11px 26px;
+    padding: 12px 28px;
     font-size: 12px;
   }
 
   .footer-brand-title {
-    font-size: 16px;
-    letter-spacing: 2.2px;
+    font-size: 18px;
+    letter-spacing: 2px;
   }
 
   .footer-nav-links {
-    gap: 20px;
+    gap: 18px;
   }
 
   .footer-nav-item {
-    font-size: 11.5px;
+    font-size: 11px;
   }
 }
